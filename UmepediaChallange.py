@@ -4,6 +4,10 @@
 # By: André Costa, Wikimedia Sverige
 # License: MIT
 # 2014
+#
+# known issues:
+## if more entities are added (i.e. more than 50 in total) then the API 
+## call would have to be slpit into several batches.
 import WikiApi as wikiApi
 import codecs
 
