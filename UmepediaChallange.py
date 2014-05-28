@@ -1,5 +1,9 @@
-#!/usr/bin/env python2.7
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+# -*- coding: utf-8  -*-
+#
+# By: André Costa, Wikimedia Sverige
+# License: MIT
+# 2014
 import WikiApi as wikiApi
 import codecs
 
@@ -10,9 +14,10 @@ outfile = u'statistik.csv'
 #setUp without login
 wd_site='https://www.wikidata.org/w/api.php'
 user = 'UmepediaChallenge'
+scriptidentify = 'UmepediaChallenge/1.0'
 reqlimit=50
 separator='w'
-wdApi = wikiApi.WikiDataApi(wd_site, user)
+wdApi = wikiApi.WikiDataApi(wd_site, user, scriptidentify)
 
 jsonr = wdApi.httpPOST("wbgetentities", [('props', 'sitelinks/urls'),
                             ('ids', '|'.join(entities).encode('utf-8'))])
